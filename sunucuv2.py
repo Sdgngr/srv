@@ -2,7 +2,6 @@ import socket
 import threading
 import time
 
-
 class Sunucu:
 
 	def __init__(self):
@@ -11,7 +10,7 @@ class Sunucu:
 
 	def SERVER(self):
 		self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-		self.sock.bind(("localhost",1331))
+		self.sock.bind(("10.172.0.2",1331))
 		self.sock.listen(10)
 
 		while True:
