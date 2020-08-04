@@ -156,13 +156,13 @@ class Sunucu:
 							pass
 
 					idd = data[7:]
-					con.sendall(("#~blg"+"localhost"+":"+str(x)).encode("utf-8"))
+					con.sendall(("#~blg"+"10.172.0.2"+":"+str(x)).encode("utf-8"))
 
 					kodListe.append(idd)
-					ipListe.append("localhost")
+					ipListe.append("10.172.0.2")
 					portListe.append(str(x))
 
-					otr = Oturum("localhost",x,idd)
+					otr = Oturum("10.172.0.2",x,idd)
 				elif "#~grs" in data:
 					for i in range(len(kodListe)):
 						if data[5:] == kodListe[i]:
@@ -179,4 +179,4 @@ class Sunucu:
 				elif "#~otr" in data:
 					Sunucu.oturumGonder(self,con,"#~otrmlr")
 
-sunucu = Sunucu("localhost",1332)
+sunucu = Sunucu("10.172.0.2",1332)
