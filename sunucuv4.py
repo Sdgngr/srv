@@ -179,4 +179,4 @@ class Sunucu:
 				elif "#~otr" in data:
 					Sunucu.oturumGonder(self,con,"#~otrmlr")
 
-sunucu = Sunucu("34.91.221.50",1332)
+sunucu = Sunucu("localhost",1332)
